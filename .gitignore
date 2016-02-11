@@ -12,6 +12,7 @@ Session.vim
 auto-save-list
 tramp
 .\#*
+/README.html
 
 # docs
 /doc
