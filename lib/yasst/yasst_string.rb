@@ -13,8 +13,8 @@ class YasstString < String
   ##
   # Encrypt self using a Yasst::Provider
   def encrypt(provider)
-    fail Yasst::Error::AlreadyEncrypted,
-         'File is already encrypted' if encrypted?
+    raise Yasst::Error::AlreadyEncrypted,
+          'File is already encrypted' if encrypted?
     @encrypted = true
     replace(provider.encrypt(to_s))
   end
@@ -28,8 +28,8 @@ class YasstString < String
   ##
   # Decrypt self using a Yasst::Provider
   def decrypt(provider)
-    fail Yasst::Error::AlreadyDecrypted,
-         'File is already decrypted' unless encrypted?
+    raise Yasst::Error::AlreadyDecrypted,
+          'File is already decrypted' unless encrypted?
     @encrypted = false
     replace(provider.decrypt(to_s))
   end

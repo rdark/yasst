@@ -34,8 +34,8 @@ module Yasst
       def algorithm=(alg)
         valgs = Yasst::Primatives::OpenSSL::Metadata.list_ciphers
         unless valgs.include? alg
-          fail Yasst::Error::InvalidCryptoAlgorithm,
-               "Invalid algorithm. Valid algorithms are #{valgs.join(', ')}"
+          raise Yasst::Error::InvalidCryptoAlgorithm,
+                "Invalid algorithm. Valid algorithms are #{valgs.join(', ')}"
         end
         @key_len = Yasst::Primatives::OpenSSL::Metadata.key_len_for(alg)
         @iv_len = Yasst::Primatives::OpenSSL::Metadata.iv_len_for(alg)
@@ -46,9 +46,9 @@ module Yasst
         if SUPPORTED_KEY_GEN_METHODS.include? method
           @key_gen_method = method
         else
-          fail NotImplementedError,
-               'Invalid or not-yet-implemented key generation method. Valid ' \
-               "methods are #{SUPPORTED_KEY_GEN_METHODS.join(', ')}"
+          raise NotImplementedError,
+                'Invalid or not-yet-implemented key generation method. Valid ' \
+                "methods are #{SUPPORTED_KEY_GEN_METHODS.join(', ')}"
         end
       end
 

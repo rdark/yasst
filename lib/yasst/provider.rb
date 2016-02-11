@@ -31,8 +31,8 @@ module Yasst
     # validates a passphrase and raise on error
     def validate_passphrase(pass = @passphrase)
       unless passphrase_valid?(pass)
-        fail Yasst::Error::InvalidPassPhrase,
-             'Passphrase does not meet minimum requirements'
+        raise Yasst::Error::InvalidPassPhrase,
+              'Passphrase does not meet minimum requirements'
       end
       true
     end
