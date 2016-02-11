@@ -16,13 +16,11 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.require_paths = ['lib']
-  spec.files = `git ls-files -z`.split("\x0").reject { |f|
-    f.match(%r{^(TODO|test|spec|features)/})
-  }
-  # ensure gem is built out of versioned files
-  spec.executables = `git ls-files -- bin/*`.split("\n").map { |f|
-    File.basename(f)
-  }
+
+  dir_exclude = Regexp.new(%r{^(test|spec|features|bin)/})
+  file_exclude = Regexp.new(/^(\.gitignore|\.travis|\.rubocop|\.rspec|Guardfile)/)
+  excludes = Regexp.union(dir_exclude, file_exclude)
+  spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(excludes) }
 
   spec.add_development_dependency 'bundler', '~> 1'
   spec.add_development_dependency 'rake', '~> 10.0'
