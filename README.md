@@ -4,6 +4,28 @@
 
 Yet Another Secret Stashing Toolkit.
 
+## Overview
+
+This project gives convenient methods for encrypting and decrypting `String`
+and `File` objects (using the [decorator pattern][decorator_pattern], rather
+than [monkey-patching][monkey_patching]) via the `YasstString` and `YasstFile`
+classes respectively.
+
+Encryption and decryption is handled by a `Yasst::Provider`; at the moment only
+OpenSSL is implemented, though support for an OpenPGP provider is planned.
+
+Each provider has a configurable `Yasst::Profile`, with sensible defaults set.
+At the time of writing, the defaults for `Yasst::Profiles::OpenSSL` are:
+
+* AES-256 cipher in CBC mode
+* key generation via PBKDF2 HMAC-SHA1 with 50,000 iterations
+* random salt generated for every encrypt action
+* random IV generated for every encrypt action
+* new key generated for every encrypt (and decrypt) action
+
+[decorator_pattern]: https://github.com/nslocum/design-patterns-in-ruby#decorator
+[monkey_patching]: http://demonastery.org/2012/11/monkey-patching-in-ruby/
+
 ## Usage
 
 ### YasstString
