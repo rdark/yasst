@@ -12,3 +12,6 @@ Metrics/CyclomaticComplexity:
 Metrics/AbcSize:
   Exclude:
     - 'lib/yasst/profiles/openssl.rb'
+Metrics/LineLength:
+  Exclude:
+    - 'yasst.gemspec'

@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   dir_exclude = Regexp.new(%r{^(test|spec|features|bin)/})
-  file_exclude = %r{^(\.gitignore|\.travis|\.rubocop|\.rspec|Guardfile)}
-  excludes = Regexp.union(dir_exclude,file_exclude)
+  file_exclude = Regexp.new(/^(\.gitignore|\.travis|\.rubocop|\.rspec|Guardfile)/)
+  excludes = Regexp.union(dir_exclude, file_exclude)
   spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(excludes) }
 
   spec.add_development_dependency 'bundler', '~> 1'
