@@ -19,9 +19,13 @@ At the time of writing, the defaults for `Yasst::Profiles::OpenSSL` are:
 
 * AES-256 cipher in CBC mode
 * key generation via PBKDF2 HMAC-SHA1 with 50,000 iterations
+
+Additionally, the OpenSSL provider will ensure that there is:
+
 * random salt generated for every encrypt action
 * random IV generated for every encrypt action
 * new key generated for every encrypt (and decrypt) action
+* encrypted string output is Base64 (web-safe) encoded
 
 [decorator_pattern]: https://github.com/nslocum/design-patterns-in-ruby#decorator
 [monkey_patching]: http://demonastery.org/2012/11/monkey-patching-in-ruby/
