@@ -34,6 +34,8 @@ Additionally, the OpenSSL provider will ensure that there is:
 
 ### YasstString
 
+#### Set up a Provider
+
     provider = Yasst::Provider::OpenSSL.new(passphrase: 'a really strong passphrase')
     provider.profile.algorithm
     => "AES-256-CBC"
@@ -41,17 +43,34 @@ Additionally, the OpenSSL provider will ensure that there is:
     => :pbkdf2
     provider.profile.pbkdf2_iterations
     => 50000
+
+#### Setup a Plain YasstString
+
     secrets = YasstString.new('some really secret data')
     secrets.encrypted?
     => false
+
+#### Encrypt a YasstString
+
     secrets.encrypt(provider)
-    => "Ubvxrj7-E7QCNqiof00RwxTka5V2debHX6gdIPdAmdRvsgB2YpjGD4IU5EYYN6uFk5iKo76k6mvK4tTIXbcBlhFmnN4mptpG
+    => "KQ0xVcHcNuX_CZU4HheZf5B4CdjelDeWkGVDiufcPWhHO_MA5-P1-qm9usTVY8Yka7jRmWNe6aKk-kLd1fEHK6-gxhK_gHSC"
     secrets.encrypted?
     => true
 
+#### Decrypt a YasstString
+
+    secrets.decrypt(provider)
+     => "some really secret data"
+
+#### Decrypt an Already Encrypted YasstString
+
+     already_encrypted = YasstString.new('KQ0xVcHcNuX_CZU4HheZf5B4CdjelDeWkGVDiufcPWhHO_MA5-P1-qm9usTVY8Yka7jRmWNe6aKk-kLd1fEHK6-gxhK_gHSC', true)
+     already_encrypted.decrypt(provider)
+     => "some really secret data" 
+
 ### YasstFile
 
-NotYetImplemented
+    NotImplementedError
 
 ## Installation
 

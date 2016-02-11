@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 * Slim down list of files published via gemspec
 * add a changelog
+* add some more examples of YasstString
 
 ## [0.1.0] - 2016-02-11
 ### Added
