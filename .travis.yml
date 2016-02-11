@@ -1,4 +1,11 @@
 language: ruby
 rvm:
-  - 2.2.3
-  - 2.1.0
+- 2.2.3
+- 2.1.0
+deploy:
+  provider: rubygems
+  gem: yasst
+  on:
+    tags: true
+  api_key:
+    secure: l2mduN8h2tjuBSr0G/XdAD5DNbiV87vZwQoLoH2PX1KQKdgaSzlJ4Mus9pSQzhq5JsLFRNtNdMvRp1AvxEajAf4Oy+H3tBSoeQEz9/wDfZvkAje1BlZyN6fXcIzj1HkDHoA8Da6y8o5xnA3Q8f+bVDloUJyjadT5Y8tOBDBo1QY4s/qPXoqUIsGLgJtBg29MqKGj/lVrvxf/+GRs62VlJny0jRhWJK+OzyxyKHB17wIs5wg+blayd8studtpJBvFFNMSFlwF1YvTCqsCyU4d9DHaR5GS0ZOev1y63E+EkkgJiXpBh+yDXVzpSjVcm4jygJdo7n6wdW+uv7yUP8rm9ULZG6TZmDIU8I1plVjD7aOMgRBvPckomHZ8maj+1FAz8Axl/bDQhM/TT0uT2ckS6h9sXMv1uSIm/hVyiTmETg7JyETHzvd/VrH4QssGdNo60MdhQJ/Cl0US/mt2xiMlAQB4qZCakWv3A8aCCg6dswouYgewvXkrSG3mUpPpmBAjBGNLkG9IRs1lUISqBOp452HuBQ5nyR9l8ATRJvHI8hdD7tPuGfQILG0k6c9ePpFrVD7odB9KkVTd7Zd8iMh0np4oc/XeZdYVelRyeGLS7vh7QdND3w0dSr5svgfzX45lD5kwYzST6JqpaJcBZu76ctMg37AV3hlZA1Ut6etZWa8=
