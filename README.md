@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rdark/yasst.svg?branch=master)](https://travis-ci.org/rdark/yasst)
 
-Yet Another Secret Stashing Toolset.
+Yet Another Secret Stashing Toolkit.
 
 ## Usage
 
