@@ -1,0 +1,14 @@
+---
+Style/RegexpLiteral:
+  Exclude:
+    - 'Guardfile'
+# TODO - simplify Yasst::Profiles::OpenSSL
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'lib/yasst/profiles/openssl.rb'
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'lib/yasst/profiles/openssl.rb'
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/yasst/profiles/openssl.rb'

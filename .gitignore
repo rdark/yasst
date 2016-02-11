@@ -1,0 +1,28 @@
+# Default ignores for vim editor
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+# Default ignores for emacs editor
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# docs
+/doc
+
+# as this is a gem, we don't check Gemfile.lock into version control
+Gemfile.lock
+
+# test harness
+pkg/*
+vendor/bundle
+vendor/cache
+.bundle
+
+tmp
