@@ -80,3 +80,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/rdark/
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Disclaimer
+
+* This security provided by this project has not been independently verified
+* Only AES ciphers are currently supported/tested, and primarily focus has so
+  far been on CBC mode.
+
