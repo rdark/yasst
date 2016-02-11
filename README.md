@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rdark/yasst.svg?branch=master)](https://travis-ci.org/rdark/yasst)
 [![Gem Version](https://badge.fury.io/rb/yasst.svg)](https://badge.fury.io/rb/yasst)
+![](http://ruby-gem-downloads-badge.herokuapp.com/yasst?type=total)
 
 Yet Another Secret Stashing Toolkit.
 
