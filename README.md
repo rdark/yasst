@@ -80,7 +80,7 @@ Still under development, not yet released
     
 #### Encrypt a YasstFile
 
-    file = YasstFile.new('/tmp/plain_file.txt'
+    file = YasstFile.new('/tmp/plain_file.txt')
     file.provider = provider
     file.encrypted?
     => false
@@ -89,7 +89,7 @@ Still under development, not yet released
 
 #### Decrypt a YasstFile
 
-    file = YasstFile.new('/tmp/plain_file.txt.aes'
+    file = YasstFile.new('/tmp/plain_file.txt.aes')
     file.provider = provider
     file.encrypted?
     => true
