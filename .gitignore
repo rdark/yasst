@@ -26,4 +26,5 @@ vendor/bundle
 vendor/cache
 .bundle
 
-tmp
+/tmp
+/spec/fixtures/tmp
