@@ -3,6 +3,7 @@
 ## General Functionality
 
 * YasstFile Implementation
+* secure file delete/scrubbing
 * support for larger-than-memory files
 * support for authenticated cipher modes
 * support for OpenPGP crypto provider
