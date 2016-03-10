@@ -12,6 +12,7 @@ Session.vim
 auto-save-list
 tramp
 .\#*
+/README.html
 
 # docs
 /doc
@@ -25,4 +26,5 @@ vendor/bundle
 vendor/cache
 .bundle
 
-tmp
+/tmp
+/spec/fixtures/tmp

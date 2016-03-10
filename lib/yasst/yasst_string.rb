@@ -14,7 +14,7 @@ class YasstString < String
   # Encrypt self using a Yasst::Provider
   def encrypt(provider)
     raise Yasst::Error::AlreadyEncrypted,
-          'File is already encrypted' if encrypted?
+          'String is already encrypted' if encrypted?
     @encrypted = true
     replace(provider.encrypt(to_s))
   end
