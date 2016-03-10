@@ -11,6 +11,7 @@ module Yasst
     class InvalidCryptoProfile < self; end
     class InvalidCryptoAlgorithm < self; end
     class InvalidPassPhrase < self; end
+    class InvalidFileDestination < self; end
     class AlreadyEncrypted < self; end
     class AlreadyDecrypted < self; end
   end

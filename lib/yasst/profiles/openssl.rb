@@ -30,6 +30,13 @@ module Yasst
           (self.pbkdf2_iterations = args[:pbkdf2_iterations])
       end
 
+      ##
+      # files matching this are deemed to be already encrypted by default
+      # TODO: auto file extension based on the algorithm in use
+      def file_extension
+        'aes'
+      end
+
       # setter method for algorithm
       def algorithm=(alg)
         valgs = Yasst::Primatives::OpenSSL::Metadata.list_ciphers

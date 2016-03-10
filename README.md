@@ -72,7 +72,29 @@ Additionally, the OpenSSL provider will ensure that there is:
 
 ### YasstFile
 
-    NotImplementedError
+Still under development, not yet released
+
+#### Set up a Provider
+
+    provider = Yasst::Provider::OpenSSL.new(passphrase: 'a really strong passphrase')
+    
+#### Encrypt a YasstFile
+
+    file = YasstFile.new('/tmp/plain_file.txt')
+    file.provider = provider
+    file.encrypted?
+    => false
+    file.encrypt
+    => "/tmp/plain_file.txt.aes"
+
+#### Decrypt a YasstFile
+
+    file = YasstFile.new('/tmp/plain_file.txt.aes')
+    file.provider = provider
+    file.encrypted?
+    => true
+    file.decrypt
+    => "/tmp/plain_file.txt"
 
 ## Installation
 
