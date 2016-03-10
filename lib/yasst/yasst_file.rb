@@ -4,12 +4,12 @@
 # TODO: initialise with a provider?
 # * file encrypt state should be detected when passed through YasstFile.new -
 #   but need to add a provider to it for detection at init time
-# * possible use of desctructive/non-destructive methods for optionally writing
+# * possible use of destructive/non-destructive methods for optionally writing
 #   files
 # * check file open modes for destructive actions (e.g NOCREAT or something)
 # * use a module/mixin for functional stuff
 # * method for shredding files
-# * support for blocks
+# * verify support for blocks
 # * helper methods and have a block that you can throw to open?
 #   (encrypt_and_shred, open_and_decrypt, read?)
 class YasstFile < File
