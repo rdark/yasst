@@ -72,7 +72,7 @@ Additionally, the OpenSSL provider will ensure that there is:
 
 ### YasstFile
 
-Still under development, not yet released
+Still under active development, interface may change
 
 #### Set up a Provider
 
