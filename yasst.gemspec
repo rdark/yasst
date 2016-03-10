@@ -22,6 +22,8 @@ Gem::Specification.new do |spec|
   excludes = Regexp.union(dir_exclude, file_exclude)
   spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(excludes) }
 
+  spec.required_ruby_version = '~> 2.0'
+
   spec.add_development_dependency 'bundler', '~> 1'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.4.0'
